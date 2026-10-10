@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOSMEL,CDL - Instituto Superior</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>YOSMEL,CDL<small>Instituto Superior</small></span>
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false"
+                aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programas">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#registro" class="btn btn-success btn-sm ms-lg-3">Regístrate</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section id="inicio" class="hero">
+    <div class="container">
+        <div class="hero-contenido">
+            <div class="hero-texto">
+                <h1>Forma tu futuro<br>con educación de calidad</h1>
+                <p>Programas técnicos superiores diseñados para impulsar tu desarrollo profesional y personal.</p>
+                <a href="#programas" class="btn btn-primary">Conoce nuestros programas</a>
+                <a href="#contacto" class="btn btn-outline-secondary">Contáctanos</a>
+            </div>
+
+            <div class="hero-imagen">
+                <img src="img/imagen6.jpg" alt="Estudiantes y docente en una sala de clases">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nosotros" class="nosotros">
+    <div class="container">
+        <h2>Sobre nosotros</h2>
+        <p>En YOSMEL,CDL formamos profesionales preparados para enfrentar los retos del mundo laboral mediante una educación moderna, práctica y de calidad.</p>
+    </div>
+</section>
+
+<section id="beneficios" class="beneficios">
+    <div class="container">
+        <h2>¿Por qué estudiar con nosotros?</h2>
+
+        <div class="beneficios-grid">
+            <div class="beneficio">
+                <div class="icono"><i class="bi bi-mortarboard-fill"></i></div>
+                <h3>Educación de calidad</h3>
+                <p>Docentes especializados y programas actualizados.</p>
+            </div>
+
+            <div class="beneficio">
+                <div class="icono"><i class="bi bi-briefcase-fill"></i></div>
+                <h3>Oportunidades reales</h3>
+                <p>Preparación para el mundo laboral.</p>
+            </div>
+
+            <div class="beneficio">
+                <div class="icono"><i class="bi bi-display"></i></div>
+                <h3>Modalidad flexible</h3>
+                <p>Estudia a tu ritmo con horarios flexibles.</p>
+            </div>
+
+            <div class="beneficio">
+                <div class="icono"><i class="bi bi-people-fill"></i></div>
+                <h3>Acompañamiento</h3>
+                <p>Te apoyamos en cada paso de tu formación.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="programas" class="programas">
+    <div class="container">
+        <h2>Nuestras carreras profesionales</h2>
+
+        <div class="programas-contenido">
+            <div class="programas-lista">
+                <div class="buscador">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <label for="buscarCarrera" class="visually-hidden">Buscar carrera</label>
+                    <input type="search" id="buscarCarrera" placeholder="Buscar carrera..." autocomplete="off" aria-controls="listaCarreras">
+                </div>
+
+                <div class="cards-programas" id="listaCarreras" aria-live="polite">
+                    <p>Cargando carreras desde Google Sheets...</p>
+                </div>
+            </div>
+
+            <aside id="registro" class="registro">
+                <h2>Regístrate ahora</h2>
+                <p>Déjanos tus datos y recibe información sobre nuestros programas.</p>
+
+                <form id="formularioRegistro">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre"
+                        placeholder="Ej. Juan Pérez" autocomplete="name" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo"
+                        placeholder="Ej. correo@ejemplo.com" autocomplete="email" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"
+                        placeholder="Ej. 987654321" autocomplete="tel" required>
+
+                    <label for="programa">Programa de interés</label>
+                    <select id="programa" name="carrera" required>
+                        <option value="">Cargando programas...</option>
+                    </select>
+
+                    <div class="terminos">
+                        <input type="checkbox" id="acepto" required>
+                        <label for="acepto">Acepto los términos y condiciones</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-success" id="btnEnviar">
+                        Enviar registro
+                    </button>
+                </form>
+
+                <div id="mensaje" role="alert" aria-live="polite"></div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<footer id="contacto">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3><i class="bi bi-mortarboard-fill"></i> YOSMEL,CDL</h3>
+                <p>Instituto Superior</p>
+                <p>Formamos profesionales con valores, conocimientos y capacidades.</p>
+            </div>
+
+            <div>
+                <h3>Enlaces rápidos</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#programas">Programas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div>
+                <h3>Contáctanos</h3>
+                <p><i class="bi bi-geo-alt-fill"></i> Av. Siempre Viva 123</p>
+                <p><i class="bi bi-telephone-fill"></i> (01) 123 4567</p>
+                <p><i class="bi bi-envelope-fill"></i> info@educatech.edu.pe</p>
+            </div>
+
+            <div>
+                <h3>Síguenos</h3>
+                <p>Mantente conectado con nuestras novedades.</p>
+                <input type="email" id="correoSuscripcion"
+                    placeholder="Tu correo electrónico" aria-label="Tu correo electrónico">
+                <button type="button" class="btn btn-primary" id="btnSuscribirme">
+                    Suscribirme
+                </button>
+                <p id="mensajeSuscripcion"></p>
+            </div>
+        </div>
+
+        <hr>
+        <p class="copyright">© 2026 YOSMEL,CDL Instituto Superior. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="toastRegistro" class="toast toast-exito" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="5000">
+        <div class="d-flex align-items-start">
+            <i class="bi bi-check-circle-fill toast-icono" aria-hidden="true"></i>
+            <div class="toast-body">
+                <strong>¡Registro exitoso!</strong>
+                <span>Recibimos tus datos. Pronto nos pondremos en contacto contigo.</span>
+            </div>
+            <button type="button" class="btn-close me-2 mt-2" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+"use strict";
+
+const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycby0B0Axz-V3651hojBvEO54I6-FDlSa6xog7vA32xsI-v_jwxw4bEyrjAwGFobhMy_EAg/exec";
+const URL_IMAGEN_ALTERNATIVA = "img/imagen6.jpg";
+
+function cargarCarreras() {
+    const lista = document.getElementById("listaCarreras");
+    const select = document.getElementById("programa");
+
+    lista.textContent = "Cargando carreras...";
+    select.replaceChildren();
+
+    const opcionInicial = document.createElement("option");
+    opcionInicial.value = "";
+    opcionInicial.textContent = "Cargando programas...";
+    select.appendChild(opcionInicial);
+
+    const nombreCallback = "__respuestaCarreras_" + Date.now();
+
+    window[nombreCallback] = function(respuesta) {
+        try {
+            if (!Array.isArray(respuesta)) {
+                throw new Error(
+                    respuesta && respuesta.mensaje
+                        ? respuesta.mensaje
+                        : "Apps Script no devolvió una lista de carreras."
+                );
+            }
+
+            lista.replaceChildren();
+            select.replaceChildren();
+
+            const opcion = document.createElement("option");
+            opcion.value = "";
+            opcion.textContent = "Selecciona una carrera";
+            select.appendChild(opcion);
+
+            if (respuesta.length === 0) {
+                lista.textContent = "No hay carreras registradas en la pestaña Carrera.";
+                return;
+            }
+
+            let cantidad = 0;
+
+            respuesta.forEach(function(carrera) {
+                if (!carrera || !String(carrera.nombre || "").trim()) {
+                    return;
+                }
+
+                const nombre = String(carrera.nombre).trim();
+                const descripcion = String(
+                    carrera.descripcion || "Información disponible próximamente."
+                ).trim();
+                const imagenUrl = String(
+                    carrera.imagen || carrera.foto || ""
+                ).trim();
+
+                const tarjeta = document.createElement("div");
+                tarjeta.className = "card-programa";
+                tarjeta.dataset.busqueda = normalizar(nombre + " " + descripcion);
+
+                const imagen = document.createElement("img");
+                imagen.alt = nombre;
+                imagen.loading = "lazy";
+                imagen.src = imagenUrl || URL_IMAGEN_ALTERNATIVA;
+
+                imagen.onerror = function() {
+                    if (this.dataset.fallback !== "1") {
+                        this.dataset.fallback = "1";
+                        this.src = URL_IMAGEN_ALTERNATIVA;
+                    }
+                };
+
+                const contenido = document.createElement("div");
+                contenido.className = "card-contenido";
+
+                const titulo = document.createElement("h3");
+                titulo.textContent = nombre;
+
+                const texto = document.createElement("p");
+                texto.textContent = descripcion;
+
+                const boton = document.createElement("a");
+                boton.href = "#registro";
+                boton.className = "btn btn-primary";
+                boton.textContent = "Más información";
+                boton.addEventListener("click", function() {
+                    seleccionarCarrera(nombre);
+                });
+
+                contenido.append(titulo, texto, boton);
+                tarjeta.append(imagen, contenido);
+                lista.appendChild(tarjeta);
+
+                const opcionCarrera = document.createElement("option");
+                opcionCarrera.value = nombre;
+                opcionCarrera.textContent = nombre;
+                select.appendChild(opcionCarrera);
+
+                cantidad++;
+            });
+
+            if (cantidad === 0) {
+                lista.textContent = "No se encontraron carreras con nombre en la columna A de Carrera.";
+            }
+        } catch (error) {
+            console.error("Error procesando carreras:", error);
+            lista.textContent = "No se pudieron mostrar las carreras. Revisa la hoja Carrera y Apps Script.";
+        } finally {
+            delete window[nombreCallback];
+            const script = document.getElementById(nombreCallback);
+            if (script) script.remove();
+        }
+    };
+
+    const script = document.createElement("script");
+    script.id = nombreCallback;
+    script.onerror = function() {
+        delete window[nombreCallback];
+        script.remove();
+        lista.textContent = "No se pudo conectar con Apps Script. Comprueba la URL y la implementación.";
+        select.replaceChildren();
+
+        const opcionError = document.createElement("option");
+        opcionError.value = "";
+        opcionError.textContent = "Error al cargar las carreras";
+        select.appendChild(opcionError);
+    };
+
+    script.src = URL_APPS_SCRIPT
+        + "?callback=" + encodeURIComponent(nombreCallback)
+        + "&t=" + Date.now();
+
+    document.head.appendChild(script);
+}
+
+function normalizar(texto) {
+    return String(texto || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "");
+}
+
+function seleccionarCarrera(nombre) {
+    const select = document.getElementById("programa");
+    const registro = document.getElementById("registro");
+
+    select.value = nombre;
+    registro.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.getElementById("buscarCarrera").addEventListener("input", function() {
+    const termino = normalizar(this.value.trim());
+    const lista = document.getElementById("listaCarreras");
+    const tarjetas = lista.querySelectorAll(".card-programa");
+
+    let visibles = 0;
+
+    tarjetas.forEach(function(tarjeta) {
+        const coincide = !termino || tarjeta.dataset.busqueda.includes(termino);
+        tarjeta.hidden = !coincide;
+        if (coincide) visibles++;
+    });
+
+    const aviso = lista.querySelector(".sin-resultados");
+    if (aviso) aviso.remove();
+
+    if (tarjetas.length > 0 && visibles === 0) {
+        const vacio = document.createElement("p");
+        vacio.className = "sin-resultados";
+        vacio.textContent = "No encontramos carreras que coincidan con tu búsqueda.";
+        lista.appendChild(vacio);
+    }
+});
+
+document.getElementById("formularioRegistro").addEventListener("submit", async function(evento) {
+    evento.preventDefault();
+
+    const formulario = this;
+    const mensaje = document.getElementById("mensaje");
+    const boton = document.getElementById("btnEnviar");
+
+    const datos = new URLSearchParams();
+    datos.append("nombre", document.getElementById("nombre").value.trim());
+    datos.append("correo", document.getElementById("correo").value.trim());
+    datos.append("telefono", document.getElementById("telefono").value.trim());
+    datos.append("carrera", document.getElementById("programa").value);
+
+    if (!datos.get("carrera")) {
+        mensaje.textContent = "Selecciona una carrera.";
+        return;
+    }
+
+    if (!document.getElementById("acepto").checked) {
+        mensaje.textContent = "Debes aceptar los términos y condiciones.";
+        return;
+    }
+
+    if (boton.disabled) {
+        return;
+    }
+
+    datos.append("idRegistro", Date.now() + "-" + Math.random().toString(36).slice(2, 10));
+
+    boton.disabled = true;
+    mensaje.textContent = "Enviando registro...";
+
+    try {
+        /*
+         * Se envía por JSONP (igual que la carga de carreras) para poder leer
+         * la respuesta real de Apps Script y confirmar que se guardó.
+         */
+        const respuesta = await enviarRegistro(datos);
+
+        if (respuesta && respuesta.success) {
+            mensaje.textContent = "";
+            formulario.reset();
+            bootstrap.Toast.getOrCreateInstance(document.getElementById("toastRegistro")).show();
+        } else {
+            mensaje.textContent = (respuesta && respuesta.mensaje)
+                ? respuesta.mensaje
+                : "No se pudo guardar el registro.";
+        }
+    } catch (error) {
+        console.error("Error enviando registro:", error);
+        mensaje.textContent = "No se pudo conectar con el servidor. Inténtalo nuevamente.";
+    } finally {
+        boton.disabled = false;
+    }
+});
+
+function enviarRegistro(datos) {
+    return new Promise(function(resolve, reject) {
+        const nombreCallback = "__respuestaRegistro_" + Date.now();
+        const script = document.createElement("script");
+
+        const limpiar = function() {
+            clearTimeout(temporizador);
+            delete window[nombreCallback];
+            script.remove();
+        };
+
+        const temporizador = setTimeout(function() {
+            limpiar();
+            reject(new Error("Tiempo de espera agotado."));
+        }, 20000);
+
+        window[nombreCallback] = function(respuesta) {
+            limpiar();
+            resolve(respuesta);
+        };
+
+        script.onerror = function() {
+            limpiar();
+            reject(new Error("No se pudo cargar la respuesta de Apps Script."));
+        };
+
+        const parametros = new URLSearchParams(datos);
+        parametros.set("accion", "registrar");
+        parametros.set("callback", nombreCallback);
+        parametros.set("t", Date.now());
+
+        script.src = URL_APPS_SCRIPT + "?" + parametros.toString();
+        document.head.appendChild(script);
+    });
+}
+
+document.getElementById("btnSuscribirme").addEventListener("click", function() {
+    const correo = document.getElementById("correoSuscripcion").value.trim();
+    const mensaje = document.getElementById("mensajeSuscripcion");
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+        mensaje.textContent = "Ingresa un correo electrónico válido.";
+        return;
+    }
+
+    mensaje.textContent = "Gracias por tu interés. La suscripción por correo todavía no está conectada.";
+});
+
+document.addEventListener("DOMContentLoaded", cargarCarreras);
+</script>
+
+</body>
+</html>
